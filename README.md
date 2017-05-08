@@ -267,4 +267,6 @@ Html:
 
 更多参数配置及说明，请参阅 [server-side#Returned data](https://datatables.net/manual/server-side)
 
+## MIT License
 
+Copyright (c) 2017 [gongph](https://github.com/gongph)
