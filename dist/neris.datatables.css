@@ -1,0 +1,28 @@
+div.dataTables_wrapper div.dataTables_paginate {
+	margin: 0;
+    white-space: nowrap;
+    text-align: left;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 8px;
+    white-space: nowrap;
+    text-align: right;
+}
+
+div.dataTables_wrapper div.dataTables_processing {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -26px;
+    text-align: center;
+    padding: 1em 0;
+    z-index: 2;
+}
+
+div.dataTables_wrapper div.dataTables_info input.jump-page {
+	width: 10%;
+	border: rgba(212,212,212,1.00) 1px solid
+}
