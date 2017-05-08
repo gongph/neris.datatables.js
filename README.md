@@ -30,23 +30,22 @@
 使用插件之前，按照惯例，先把需要的依赖引入，像下面的代码：
 
 ```html
+<!-- assets style -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="./assets/dataTables/1.10.15/dataTables.bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="./assets/mCustomScrollbar/3.1.0/jquery.mCustomScrollbar.css" />
 
+<!-- component style -->
 <link rel="stylesheet" type="text/css" href="./dist/neris.datatables.min.css" />
 
-<!-- jquery -->
+<!-- assets script -->
 <script src="./assets/jquery/1.12.0/jquery.js" type="text/javascript"></script>
-
-<!-- dataTables -->
 <script src="./assets/dataTables/1.10.15/jquery.dataTables.js" type="text/javascript"></script>
 <script src="./assets/dataTables/1.10.15/dataTables.bootstrap.min.js" type="text/javascript"></script>
-
-<!-- 滚动条 -->
 <script src="./assets/mCustomScrollbar/3.1.0/jquery.mousewheel.js" type="text/javascript"></script>
 <script src="./assets/mCustomScrollbar/3.1.0/jquery.mCustomScrollbar.js" type="text/javascript"></script>
 
+<!-- components script -->
 <script src="./dist/neris.datatables.min.js" type="text/javascript" charset="utf-8"></script>
 
 ```
@@ -58,7 +57,7 @@ JavaScript:
 
 ```js
 $( function () {
-	$( "#example" ).nerisDataTables( options );
+  $( "#example" ).nerisDataTables( options );
 });
 ```
 
@@ -69,35 +68,27 @@ Html:
 ```
 
 ## options
-以下是 options 对象所有的参数列表：
+以下是 `options` 对象所有的参数列表：
 
-- indexing
-Boolean 类型，默认 false，是否显示索引列。
+- indexing | `Boolean` ，默认 false，是否显示索引列。
 
-- checking
-Boolean 类型，默认 false，是否显示勾选列。
+- checking | `Boolean` ，默认 false，是否显示勾选列。
 
-- processing
-Boolean 类型，默认 false，是否显示 Loading 动画。
+- processing | `Boolean` ，默认 false，是否显示 Loading 动画。
 
-- paging
-Boolean 类型，默认 false，是否显示分页。
+- paging | `Boolean` ，默认 false，是否显示分页。
 
-- pageLength
-Number 类型，默认 5 条，每页显示条数。
+- pageLength | `Number` ，默认 5 条，每页显示条数。
 
-- pageShow
-String 类型，默认 "bottom"，分页栏显示方式。
+- pageShow | `String` ，默认 "bottom"，分页栏显示方式。
   - "top" : 在表格顶部显示
   - "bottom" : 在表格底部显示
   - "all" : 表格上下都显示分页
 
  
-- scrollX
-Boolean 类型，默认 false，是否显示横向滚动条。
+- scrollX | `Boolean` ，默认 false，是否显示横向滚动条。
 
-- rowId
-String 类型，默认 ""，指定行 id。此属性会为表格中每行的 `tr` 标签设置一个 `id` 属性，属性的值就是 rowId 中指定的内容。可以是普通字符串，也可以是服务端数据中某一个 key。 [参考资料](https://datatables.net/reference/option/rowId)
+- rowId | `String` ，默认 ""，指定行 id。此属性会为表格中每行的 `tr` 标签设置一个 `id` 属性，属性的值就是 rowId 中指定的内容。可以是普通字符串，也可以是服务端数据中某一个 key。 [参考资料](https://datatables.net/reference/option/rowId)
 
 	例如：
 
@@ -134,8 +125,7 @@ String 类型，默认 ""，指定行 id。此属性会为表格中每行的 `tr
 	```
 
 
-- ajax
-String | Object 类型，服务端请求，[参考资料](https://datatables.net/reference/option/ajax)。
+- ajax `String | Object` ，服务端请求，[参考资料](https://datatables.net/reference/option/ajax)。
 	例如：
 
 	```js
@@ -188,8 +178,7 @@ String | Object 类型，服务端请求，[参考资料](https://datatables.net
 	```
 
 
-- columns | `ArrayObject`
-ArrayObject 类型，默认 []，控制表格列的显示，[参考资料](https://datatables.net/reference/option/columns)。数组中每个对象完整的选项如下：
+- columns | `ArrayObject` ，默认 []，控制表格列的显示，[参考资料](https://datatables.net/reference/option/columns)。数组中每个对象完整的选项如下：
 
 	```js
 	$("#example").nerisDataTables({
@@ -258,6 +247,7 @@ ArrayObject 类型，默认 []，控制表格列的显示，[参考资料](https
 
 | 参数名 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
+| draw | int | 1 | 表格绘制计数器 |
 | start | int | 0 | 每页起始值 |
 | length | int | 默认等于 pageLength 的值 | 每页条数 |
 
@@ -268,10 +258,10 @@ ArrayObject 类型，默认 []，控制表格列的显示，[参考资料](https
 
 ```js
 {
-	draw: 1,
-	recordsTotal: 57,
-	recordsFiltered: 57,
-	data: []
+  draw: 1,
+  recordsTotal: 57,
+  recordsFiltered: 57,
+  data: []
 }
 ```
 
